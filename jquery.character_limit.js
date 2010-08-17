@@ -6,7 +6,6 @@ function limit_words(){
     var div_name = input.attr('id');
     var current  = word_count(input);
     input.parent().before("<div id='" + div_name + "_limit' class='words_remaining'>" + current + " of " + allowed + " words used</div>");
-    input.parent().before("<div id='" + div_name + "_limit' class='characters_remaining' style='opacity:" + opacity + ";'>" + (allowed - current) + " characters left</div>");
   });
 
   jQuery(".word_limit").keyup(function(event){
